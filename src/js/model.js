@@ -1,4 +1,4 @@
-// src/js/model.js
+
 import { API_URL, RES_PER_PAGE } from './config.js';
 import { getJSON } from './helpers.js';
 

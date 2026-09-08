@@ -19,17 +19,17 @@ class PaginationView {
     const numPages = Math.ceil(this.#data.results.length / this.#data.resultsPerPage);
     const curPage = this.#data.page;
 
-    // Página 1 y hay más páginas
+    
     if (curPage === 1 && numPages > 1) {
       return this.#generateButtonNext(curPage);
     }
 
-    // Última página
+    
     if (curPage === numPages && numPages > 1) {
       return this.#generateButtonPrev(curPage);
     }
 
-    // Página intermedia
+    
     if (curPage < numPages) {
       return `
         ${this.#generateButtonPrev(curPage)}
@@ -37,7 +37,7 @@ class PaginationView {
       `;
     }
 
-    // Página 1 y NO hay más páginas
+    
     return '';
   }
 

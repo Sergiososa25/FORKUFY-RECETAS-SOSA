@@ -829,7 +829,6 @@ exports.export = function(dest, destName, get) {
 };
 
 },{}],"3QBkH":[function(require,module,exports,__globalThis) {
-// src/js/model.js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
@@ -1146,7 +1145,6 @@ class RecipeView extends (0, _viewJsDefault.default) {
 exports.default = new RecipeView();
 
 },{"../View.js":"hMymw","url:../../img/icons.svg":"fd0vu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"hMymw":[function(require,module,exports,__globalThis) {
-// src/js/View.js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _iconsSvg = require("url:../img/icons.svg");
@@ -1297,16 +1295,12 @@ class PaginationView {
         this.#data = data;
         const numPages = Math.ceil(this.#data.results.length / this.#data.resultsPerPage);
         const curPage = this.#data.page;
-        // Página 1 y hay más páginas
         if (curPage === 1 && numPages > 1) return this.#generateButtonNext(curPage);
-        // Última página
         if (curPage === numPages && numPages > 1) return this.#generateButtonPrev(curPage);
-        // Página intermedia
         if (curPage < numPages) return `
         ${this.#generateButtonPrev(curPage)}
         ${this.#generateButtonNext(curPage)}
       `;
-        // Página 1 y NO hay más páginas
         return '';
     }
     #generateButtonPrev(curPage) {
@@ -1369,7 +1363,6 @@ class BookmarksView extends (0, _viewJsDefault.default) {
 exports.default = new BookmarksView();
 
 },{"url:../../img/icons.svg":"fd0vu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","../View.js":"hMymw"}],"8AWnP":[function(require,module,exports,__globalThis) {
-// src/js/views/addRecipeView.js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _viewJs = require("../View.js");
