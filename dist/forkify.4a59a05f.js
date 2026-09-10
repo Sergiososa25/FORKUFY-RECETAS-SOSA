@@ -1021,8 +1021,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _viewJs = require("./View.js");
 var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
-var _iconsSvg = require("url:../../img/icons.svg");
-var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+const icons = new URL(require("c11290a51c3b65b5")).href;
 class RecipeView extends (0, _viewJsDefault.default) {
     _parentElement = document.querySelector('.recipe');
     #errorMessage = 'We could not find that recipe. Please try another one!';
@@ -1060,14 +1059,14 @@ class RecipeView extends (0, _viewJsDefault.default) {
       <div class="recipe__details">
         <div class="recipe__info">
           <svg class="recipe__info-icon">
-            <use href="${0, _iconsSvgDefault.default}#icon-clock"></use>
+            <use href="${icons}#icon-clock"></use>
           </svg>
           <span class="recipe__info-data recipe__info-data--minutes">${this._data.cookingTime}</span>
           <span class="recipe__info-text">minutes</span>
         </div>
         <div class="recipe__info">
           <svg class="recipe__info-icon">
-            <use href="${0, _iconsSvgDefault.default}#icon-users"></use>
+            <use href="${icons}#icon-users"></use>
           </svg>
           <span class="recipe__info-data recipe__info-data--people">${this._data.servings}</span>
           <span class="recipe__info-text">servings</span>
@@ -1075,12 +1074,12 @@ class RecipeView extends (0, _viewJsDefault.default) {
           <div class="recipe__info-buttons">
             <button class="btn--tiny btn--update-servings" data-update-to="${this._data.servings - 1}">
               <svg>
-                <use href="${0, _iconsSvgDefault.default}#icon-minus-circle"></use>
+                <use href="${icons}#icon-minus-circle"></use>
               </svg>
             </button>
             <button class="btn--tiny btn--update-servings" data-update-to="${this._data.servings + 1}">
               <svg>
-                <use href="${0, _iconsSvgDefault.default}#icon-plus-circle"></use>
+                <use href="${icons}#icon-plus-circle"></use>
               </svg>
             </button>
           </div>
@@ -1088,12 +1087,12 @@ class RecipeView extends (0, _viewJsDefault.default) {
 
         <div class="recipe__user-generated ${this._data.key ? '' : 'hidden'}">
           <svg>
-            <use href="${0, _iconsSvgDefault.default}#icon-user"></use>
+            <use href="${icons}#icon-user"></use>
           </svg>
         </div>
         <button class="btn--round btn--bookmark">
           <svg class="">
-            <use href="${0, _iconsSvgDefault.default}#icon-bookmark${this._data.bookmarked ? '-fill' : ''}"></use>
+            <use href="${icons}#icon-bookmark${this._data.bookmarked ? '-fill' : ''}"></use>
           </svg>
         </button>
       </div>
@@ -1119,7 +1118,7 @@ class RecipeView extends (0, _viewJsDefault.default) {
         >
           <span>Directions</span>
           <svg class="search__icon">
-            <use href="${0, _iconsSvgDefault.default}#icon-arrow-right"></use>
+            <use href="${icons}#icon-arrow-right"></use>
           </svg>
         </a>
       </div>
@@ -1129,7 +1128,7 @@ class RecipeView extends (0, _viewJsDefault.default) {
         return `
       <li class="recipe__ingredient">
         <svg class="recipe__icon">
-          <use href="${0, _iconsSvgDefault.default}#icon-check"></use>
+          <use href="${icons}#icon-check"></use>
         </svg>
         <div class="recipe__quantity">${ing.quantity ? ing.quantity : ''}</div>
         <div class="recipe__description">
@@ -1142,13 +1141,12 @@ class RecipeView extends (0, _viewJsDefault.default) {
 }
 exports.default = new RecipeView();
 
-},{"./View.js":"jSw21","url:../../img/icons.svg":"fd0vu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jSw21":[function(require,module,exports,__globalThis) {
+},{"./View.js":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","c11290a51c3b65b5":"aob6l"}],"jSw21":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _viewJs = require("./View.js");
 var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
-var _iconsSvg = require("url:../../img/icons.svg");
-var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+const icons = new URL(require("fcd5427331ff87b4")).href;
 class View {
     _data;
     render(data, render = true) {
@@ -1180,7 +1178,7 @@ class View {
         const markup = `
       <div class="spinner">
         <svg>
-          <use href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>
+          <use href="${icons}#icon-loader"></use>
         </svg>
       </div>
     `;
@@ -1192,7 +1190,7 @@ class View {
       <div class="error">
         <div>
           <svg>
-            <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+            <use href="${icons}#icon-alert-triangle"></use>
           </svg>
         </div>
         <p>${message}</p>
@@ -1206,7 +1204,7 @@ class View {
       <div class="message">
         <div>
           <svg>
-            <use href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
+            <use href="${icons}#icon-smile"></use>
           </svg>
         </div>
         <p>${message}</p>
@@ -1218,16 +1216,15 @@ class View {
 }
 exports.default = View;
 
-},{"./View.js":"jSw21","url:../../img/icons.svg":"fd0vu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fd0vu":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("icons.0809ef97.svg") + "?" + Date.now();
+},{"./View.js":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","fcd5427331ff87b4":"aob6l"}],"aob6l":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("icons.7bd9dd61.svg") + "?" + Date.now();
 
 },{}],"kbE4Z":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _viewJs = require("./View.js");
 var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
-var _iconsSvg = require("url:../../img/icons.svg");
-var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+const icons = new URL(require("468beb5a8c4f47e")).href;
 class SearchView {
     #parentEl = document.querySelector('.search');
     getQuery() {
@@ -1247,13 +1244,12 @@ class SearchView {
 }
 exports.default = new SearchView();
 
-},{"./View.js":"jSw21","url:../../img/icons.svg":"fd0vu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"kBQ4r":[function(require,module,exports,__globalThis) {
+},{"./View.js":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","468beb5a8c4f47e":"aob6l"}],"kBQ4r":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _viewJs = require("./View.js");
 var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
-var _iconsSvg = require("url:../../img/icons.svg");
-var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+const icons = new URL(require("2e4da4353ae8e631")).href;
 class ResultsView extends (0, _viewJsDefault.default) {
     _parentElement = document.querySelector('.results');
     _errorMessage = 'No recipes found for your query! Please try again ;)';
@@ -1280,7 +1276,7 @@ class ResultsView extends (0, _viewJsDefault.default) {
 }
 exports.default = new ResultsView();
 
-},{"./View.js":"jSw21","url:../../img/icons.svg":"fd0vu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"7NIiB":[function(require,module,exports,__globalThis) {
+},{"./View.js":"jSw21","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","2e4da4353ae8e631":"aob6l"}],"7NIiB":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _viewJs = require("./View.js");
@@ -1338,7 +1334,10 @@ class PaginationView extends (0, _viewJsDefault.default) {
 }
 exports.default = new PaginationView();
 
-},{"./View.js":"jSw21","url:../../img/icons.svg":"fd0vu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"1qGeA":[function(require,module,exports,__globalThis) {
+},{"./View.js":"jSw21","url:../../img/icons.svg":"fd0vu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fd0vu":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("icons.0809ef97.svg") + "?" + Date.now();
+
+},{}],"1qGeA":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _viewJs = require("./View.js");

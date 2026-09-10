@@ -1,6 +1,5 @@
 import View from './View.js';
-import icons from 'url:../../img/icons.svg';
-
+const icons = new URL('../../img/icons.svg', import.meta.url).href;
 export default class View {
   _data;
 

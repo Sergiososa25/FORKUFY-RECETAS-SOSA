@@ -1,6 +1,5 @@
 import View from './View.js';
-import icons from 'url:../../img/icons.svg';
-class RecipeView extends View {
+const icons = new URL('../../img/icons.svg', import.meta.url).href;class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
   #errorMessage = 'We could not find that recipe. Please try another one!';
   #message = '';
